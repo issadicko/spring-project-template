@@ -1,0 +1,30 @@
+
+# Application standard configs
+spring:
+  application:
+    name: spring-boot-template
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mariadb://127.0.0.1:3306/my_template
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 3MB
+
+server:
+  port: 8080
